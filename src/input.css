@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+    /*colors*/
+    --color-primary: #ff7500;
+    --color-black:#000;
+    --color-white:#fff;
+    --color-gray: #505050;
+    --color-black-09: #090909;
+    --color-black-14: #141414;
+    --color-black-15: #151515;
+    --color-black-20: #202020;
+    --color-gray-d7: #d7d7d7;
+    --color-light-ec: #ececec;
+    
+
+    /*fonts*/
+    --default-font-family: "Source Sans Pro", "Arial", sans-serif;
+}
+
+
+@layer base {
+    @font-face {
+        font-family: 'Source Sans Pro';
+        src: url('./fonts/SourceSansPro-Regular.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    
+    @font-face {
+        font-family: 'Source Sans Pro';
+        src: url('./fonts/SourceSansPro-Bold.woff2') format('woff2');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+    
+    @font-face {
+        font-family: 'Source Sans Pro';
+        src: url('./fonts/SourceSansPro-Semibold.woff2') format('woff2');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    html {
+        @apply h-full;
+    }
+    
+    body{
+        @apply h-full flex flex-col bg-white text-base font-normal leading-[1] text-black-15;
+    }
+
+    main {
+        @apply grow;
+    }
+}
+
+@layer components {
+    
+}
+
+@layer utilities {
+    .container {
+        @apply w-full max-w-[980px] px-5 mx-auto;
+    }
+}
